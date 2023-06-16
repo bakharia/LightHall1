@@ -1,0 +1,117 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  --ion-background-color: #b4c59f;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styles */
+.container {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Point styles */
+.point {
+  margin-bottom: 10px;
+}
+
+/* Input styles for not dark mode */
+body:not(.dark-mode) ion-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --background: transparent;
+  --color: #333;
+  --border-color: #ccc;
+  --border-radius: 5px;
+}
+
+/* Label styles for not dark mode */
+body:not(.dark-mode) ion-label {
+  font-size: 16px;
+  color: #808875 !important;
+  transition: color 0.3s;
+}
+
+/* Floating label styles for not dark mode when input has focus */
+body:not(.dark-mode) ion-input:focus-within + ion-label,
+body:not(.dark-mode) ion-input.has-value + ion-label {
+  color: #808875 !important;
+  font-size: 12px;
+  transform: translate3d(0, -16px, 0);
+  transition: color 0.3s, font-size 0.3s, transform 0.3s;
+}
+
+/* Button styles */
+body:not(.dark-mode) ion-button {
+  margin-top: 10px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --background: #808875;
+  --color: #fff;
+  --border-radius: 5px;
+}
+
+ion-button {
+  margin-top: 10px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --background: #3d3d3d;
+  --color: #fff;
+  --border-radius: 5px;
+}
+
+/* Custom styles for ion-input */
+ion-input::part(textarea),
+ion-input::part(input) {
+  --highlight-color-focused: #808875;
+  --caret-color: #808875;
+}
+
+body:is(.dark-mode) ion-input::part(textarea),
+body:is(.dark-mode)::part(input) {
+  --highlight-color-focused: whitesmoke;
+  --caret-color: whitesmoke;
+}
+
+/* Result styles */
+body:not(.dark-mode) #result {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+body:is(.dark-mode) #result {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --ion-background-color: #222;
+  --ion-text-color: #fff;
+}
+
+/* Light mode styles */
+.light-mode {
+  --ion-background-color: #f5f5f5;
+  --ion-text-color: #333;
+}

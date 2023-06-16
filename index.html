@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Air Distance Calculator</title>
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+
+    <!--Ionic FrameWork-->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>
+            Air Distance Calculator
+          </ion-title>
+          <ion-buttons slot="end">
+            <ion-toggle id="themeBtn">Switch Themes</ion-toggle>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Point A</ion-label>
+              <ion-input
+                type="text"
+                id="pointA"
+                placeholder="Latitude, Longitude"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Point B</ion-label>
+              <ion-input
+                type="text"
+                id="pointB"
+                placeholder="Latitude, Longitude"
+              ></ion-input>
+            </ion-item>
+
+            <ion-button expand="full" id="calculateBtn">Calculate</ion-button>
+
+            <p id="result"></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ion-app>
+
+    <script src="src/index.js"></script>
+    <!--Ionicons-->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
